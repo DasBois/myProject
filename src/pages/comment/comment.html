@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar class="palabras" color="primary">
+    <ion-title>Chat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+  <ion-content padding class="palabras">
+      <div id="lime">
+          <p>
+            How can we improve our marketing stategy with black male teenagers?
+          </p>
+        </div>
+      <ion-card *ngFor="let text of texts" class='box1'>
+    
+        <div>
+          <ion-row>
+            <div>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="../../assets/imgs/foto3.png">
+                </ion-avatar>
+                <h2>Jermaine Cole</h2>
+              </ion-item>
+            </div>
+            <div>
+              <ion-col>
+                <button ion-button icon-start clear small (click)='likePost(text)' class='btn'></button>
+                  <ion-icon ios="ios-arrow-dropup" md="md-arrow-dropup" class='btnset'></ion-icon>
+                  <div>{{text.likes}} Agree!</div>
+             
+              </ion-col>
+            </div>
+          </ion-row>
+        </div>
+    
+        <ion-card-content>
+          <p class="textmargin">{{ text.text }}</p>
+        </ion-card-content>
+    
+      </ion-card>
+      <div class="input">
+        <form>
+          <input id="post" type="text" placeholder="Add Opinion..." [(ngModel)]="newText" [ngModelOptions]="{standalone:true}">
+          <button class="input" type="submit" class="postbtn" [value]="btnText" (click)="addPost()">Submit</button>
+        </form>
+      </div>
+
+      
+
+    </ion-content>
+  
