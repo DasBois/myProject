@@ -25,12 +25,7 @@
               </ion-item>
             </div>
             <div>
-              <ion-col>
-                <button ion-button icon-start clear small (click)='likePost(text)' class='btn'></button>
-                  <ion-icon ios="ios-arrow-dropup" md="md-arrow-dropup" class='btnset'></ion-icon>
-                  <div>{{text.likes}} Agree!</div>
-             
-              </ion-col>
+          
             </div>
           </ion-row>
         </div>
@@ -38,16 +33,33 @@
         <ion-card-content>
           <p class="textmargin">{{ text.text }}</p>
         </ion-card-content>
-    
+        <ion-row>
+            <ion-col>
+                <div>Just Now</div>
+            </ion-col>
+            <ion-col center text-center>
+              <div id="pushItDown"></div>
+              <button ion-button icon-start clear small (click)='likePost(text)' class='btn'>
+                  <ion-icon ios="ios-bulb" md="md-bulb" class='btnset'></ion-icon>
+                  <div>{{text.likes}} Likes</div>
+                </button>
+            </ion-col>
+          </ion-row>
       </ion-card>
-      <div class="input">
+
+      <ion-tabs>
+      <div class="input" >
+        <br>
         <form>
-          <input id="post" type="text" placeholder="Add Opinion..." [(ngModel)]="newText" [ngModelOptions]="{standalone:true}">
-          <button class="input" type="submit" class="postbtn" [value]="btnText" (click)="addPost()">Submit</button>
+          <ion-row>
+            <ion-avatar item-start style="padding-left: 5px; padding-right: 5px;">
+                <img src="../../assets/imgs/foto3.png">
+              </ion-avatar>
+          <input style="border-style: 1px solid; position:relative; border-radius: 50px; width:245px; float: right; padding-right: 10px;" id="post" type="text" placeholder="Add Opinion..." [(ngModel)]="newText" [ngModelOptions]="{standalone:true}">
+          <button style=" padding-left: 5px; position:static; padding-left:5px; border-style: 1px solid; border-radius: 50px;" class="input" type="submit" class="postbtn" [value]="btnText" (click)="addPost()">Send</button>
+          </ion-row>
         </form>
       </div>
-
-      
-
+      </ion-tabs>
     </ion-content>
   

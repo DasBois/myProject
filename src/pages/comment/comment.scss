@@ -11,9 +11,17 @@ page-comment {
         font-family: 'Poppins', sans-serif;
     }
     .input{
+        line-height: 60%;
+        bottom: 5px;
         position: fixed;
     }
+   
     .words{
         font-weight:0;
+    }
+    .post{
+        border-width: 20px solid;
+        background-color: #cdcdcd;
+        border-radius: 25px;
     }
 }
