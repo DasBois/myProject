@@ -1,7 +1,7 @@
 <ion-header>
 
-  <ion-navbar class="palabras" color="primary">
-    <ion-title>Chat</ion-title>
+  <ion-navbar center class="palabras" color="primary">
+    <ion-title center >Chat</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -19,7 +19,7 @@
             <div>
               <ion-item>
                 <ion-avatar item-start>
-                  <img src="../../assets/imgs/foto3.png">
+                  <img src="assets/imgs/foto3.png">
                 </ion-avatar>
                 <h2>Jermaine Cole</h2>
               </ion-item>
@@ -38,7 +38,7 @@
                 <div>Just Now</div>
             </ion-col>
             <ion-col center text-center>
-              <div id="pushItDown"></div>
+              <div class="pushItDown"></div>
               <button ion-button icon-start clear small (click)='likePost(text)' class='btn'>
                   <ion-icon ios="ios-bulb" md="md-bulb" class='btnset'></ion-icon>
                   <div>{{text.likes}} Likes</div>
@@ -47,19 +47,17 @@
           </ion-row>
       </ion-card>
 
-      <ion-tabs>
-      <div class="input" >
+      <div class="input">
         <br>
         <form>
           <ion-row>
-            <ion-avatar item-start style="padding-left: 5px; padding-right: 5px;">
-                <img src="../../assets/imgs/foto3.png">
+            <ion-avatar item-start style="padding-left: 5px; padding-right: 7px;">
+                <img src="assets/imgs/foto3.png">
               </ion-avatar>
           <input style="border-style: 1px solid; position:relative; border-radius: 50px; width:245px; float: right; padding-right: 10px;" id="post" type="text" placeholder="Add Opinion..." [(ngModel)]="newText" [ngModelOptions]="{standalone:true}">
           <button style=" padding-left: 5px; position:static; padding-left:5px; border-style: 1px solid; border-radius: 50px;" class="input" type="submit" class="postbtn" [value]="btnText" (click)="addPost()">Send</button>
           </ion-row>
         </form>
       </div>
-      </ion-tabs>
     </ion-content>
   

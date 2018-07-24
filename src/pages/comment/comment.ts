@@ -38,25 +38,24 @@ export class CommentPage {
     this.newText = '';
     this.itemCount = this.texts.length;
   }
-
   likePost(likedPost) {
 
-      if(likedPost.likes==0){
-        likedPost.likes += 1
+    if(likedPost.likes==0){
+      likedPost.likes += 1
+    }
+  
+    console.log(likedPost.likes)
+    console.log("Hello World")
+    // sort likedPosts
+    this.texts = this.texts.sort((a, b) => {
+      if (a.likes > b.likes) {
+        return -1;
       }
-    
-      console.log(likedPost.likes)
-      console.log("Hello World")
-      // sort likedPosts
-      this.texts = this.texts.sort((a, b) => {
-        if (a.likes > b.likes) {
-          return -1;
-        }
-        if (a.likes < b.likes) {
-          return 1;
-        }
-        return 0;
-      })
+      if (a.likes < b.likes) {
+        return 1;
+      }
+      return 0;
+    })
     console.log(this.texts);
     
     
