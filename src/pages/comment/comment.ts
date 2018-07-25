@@ -8,11 +8,66 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
-@Component({
-  selector: 'page-comment',
-  templateUrl: 'comment.html',
-})
+ @IonicPage()
+ @Component({
+   selector: 'page-comment',
+   templateUrl: 'comment.html',
+ })
+//  export class CommentPage {
+//    texts = [];
+//    newText = '';
+//    itemCount = 0;
+//    info;
+//    name = 'No Class Selected';
+
+//    constructor(public navCtrl: NavController, public navParams: NavParams) {
+//      this.info = this.navParams.get('info');
+//      if(this.info != undefined){
+//        this.texts = this.info.comments;
+//        this.name = this.info.teacherName;
+//      }
+//    }
+
+//    addPost() {
+//      this.texts.push(
+//        {
+//          text: this.newText,
+//          likes: 0
+//        }
+//      );
+//      this.newText = '';
+//      this.itemCount = this.texts.length;
+//    }
+//   likePost(likedPost) {
+
+//     if(likedPost.likes==0){
+//        likedPost.likes += 1
+//      }
+  
+//     console.log(likedPost.likes)
+//      console.log("Hello World")
+//     // sort likedPosts
+//      this.texts = this.texts.sort((a, b) => {
+//       if (a.likes > b.likes) {
+//          return -1;
+//       }
+//       if (a.likes < b.likes) {
+//         return 1;
+//       }
+//        return 0;
+//      })
+//      console.log(this.texts);
+    
+    
+    
+//    }
+
+//    // const da = new Date(){}
+//   // const a = da.getHours() + ':'+da.getMinutes()
+  
+
+//  }
+
 export class CommentPage {
   texts = [];
   newText = '';
@@ -23,6 +78,24 @@ export class CommentPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.info = this.navParams.get('info');
     if(this.info != undefined){
+      this.texts = this.info.comments;
+      this.name = this.info.teacherName;
+    }
+    else{
+      this.info = {
+        class_id: 0,
+        className: 'Algebra',
+        teacherPicture: 'assets/imgs/teacher.png',
+        teacherName: 'Mr. Domingez',
+        roomNumber: "Room 745",
+        period: 'Period 1',
+        comments: [
+          {
+            likes: 0,
+            text: 'Hire more black staff',
+          }
+        ]
+      };
       this.texts = this.info.comments;
       this.name = this.info.teacherName;
     }
@@ -38,24 +111,25 @@ export class CommentPage {
     this.newText = '';
     this.itemCount = this.texts.length;
   }
+
   likePost(likedPost) {
 
-    if(likedPost.likes==0){
-      likedPost.likes += 1
-    }
-  
-    console.log(likedPost.likes)
-    console.log("Hello World")
-    // sort likedPosts
-    this.texts = this.texts.sort((a, b) => {
-      if (a.likes > b.likes) {
-        return -1;
+      if(likedPost.likes==0){
+        likedPost.likes += 1
       }
-      if (a.likes < b.likes) {
-        return 1;
-      }
-      return 0;
-    })
+    
+      console.log(likedPost.likes)
+      console.log("Hello World")
+      // sort likedPosts
+      this.texts = this.texts.sort((a, b) => {
+        if (a.likes > b.likes) {
+          return -1;
+        }
+        if (a.likes < b.likes) {
+          return 1;
+        }
+        return 0;
+      })
     console.log(this.texts);
     
     
@@ -66,3 +140,5 @@ export class CommentPage {
   // const a = da.getHours() + ':'+da.getMinutes()
   
 }
+
+
