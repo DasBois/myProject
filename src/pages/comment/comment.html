@@ -35,10 +35,10 @@
         </ion-card-content>
         <ion-row>
             <ion-col>
-                <div>Just Now</div>
+                <p>Just Now</p>
             </ion-col>
             <ion-col center text-center>
-              <div class="pushItDown"></div>
+              <div></div>
               <button ion-button icon-start clear small (click)='likePost(text)' class='btn'>
                   <ion-icon ios="ios-bulb" md="md-bulb" class='btnset'></ion-icon>
                   <div>{{text.likes}} Likes</div>
@@ -51,11 +51,11 @@
         <br>
         <form>
           <ion-row>
-            <ion-avatar item-start style="padding-left: 5px; padding-right: 7px;">
+            <ion-avatar item-start style="padding-left: 2px; padding-right: 7px;">
                 <img src="assets/imgs/foto3.png">
               </ion-avatar>
-          <input style="border-style: 1px solid; position:relative; border-radius: 50px; width:245px; float: right; padding-right: 10px;" id="post" type="text" placeholder="Add Opinion..." [(ngModel)]="newText" [ngModelOptions]="{standalone:true}">
-          <button style=" padding-left: 5px; position:static; padding-left:5px; border-style: 1px solid; border-radius: 50px;" class="input" type="submit" class="postbtn" [value]="btnText" (click)="addPost()">Send</button>
+          <input style="border-style: 0.5px solid; position:relative; border-color:black; border-radius: 50px; width:245px; float: right; padding-right: 10px;" id="post" type="text" placeholder="Add Opinion..." [(ngModel)]="newText" [ngModelOptions]="{standalone:true}">
+          <button style="position:static; padding-left:15px; border-style: 1px solid; border-radius: 50px; background-color: white;" class="input" type="submit" class="postbtn" [value]="btnText" (click)="addPost()">Send</button>
           </ion-row>
         </form>
       </div>

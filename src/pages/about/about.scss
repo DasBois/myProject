@@ -1,0 +1,79 @@
+page-about {
+h5{
+    color:white;
+    text-align:center;
+}
+
+    .square{
+        height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        border: solid 1px transparent;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        overflow: hidden;
+    }
+    .s1{
+       
+    }
+    .s2{
+        
+    }
+    .s3{
+        
+    }
+    .s4{
+    }
+    .title{
+            margin-top: 80px;
+            font-size: 24px;
+            font-weight: 500;
+    }
+    .top{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: -20px;
+        background-color: white;
+    }
+    
+    ion-content{
+        background-color: white;
+    }
+
+    .buttonbottom{
+        line-height: 100%;
+        bottom: 5px;
+        position: fixed;
+        right:38%;
+        width: 90px;
+    }
+   .clickable{
+        outline: 0;
+        color: #FF4F49;
+    }
+      
+      .button{
+    width: 25%;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    
+}
+
+
+
+}
+
+
+.myBorder{
+    border: solid 3px #FF4F49 !important;
+}

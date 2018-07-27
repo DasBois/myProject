@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <h5>Categories</h5>
+    <ion-buttons end>
+      
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div active id = "1" class="clickable" class="square s1" (click)="click(0)" [ngClass]="{'myBorder': items[0]}">
+    
+      <img src="assets/imgs/Business.jpg"/>
+   
+  </div>
+<br>
+  <div id = "2" class="clickable" class="square s2" (click)="click(1)" [ngClass]="{'myBorder': items[1]}">
+  
+      <img src="assets/imgs/technology1.jpg"/>
+   
+  </div>
+<br>
+  <div id = "3" class="clickable" class="square s3" (click)="click(2)" [ngClass]="{'myBorder': items[2]}">
+   
+        <img src="assets/imgs/Educaytion.jpg"/>
+    
+  </div>
+  <br>
+  <div id = "4" class="clickable" class="square s4" (click)="click(3)" [ngClass]="{'myBorder': items[3]}">
+   
+        <img src="assets/imgs/Sports.jpg"/>
+   
+  </div>
+
+<div style="text-align: center;">
+    <button class="buttonbottom" ion-button (click)="changePage()" *ngIf="selected" >
+      Submit
+    </button> 
+  </div>
+</ion-content>
