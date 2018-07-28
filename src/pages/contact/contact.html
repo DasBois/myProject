@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar center color="primary">
-    <ion-title center >
+    <ion-title center class="palabras">
       Rewards
     </ion-title>
   </ion-navbar>
@@ -14,11 +14,25 @@
  
         <img class="center" src="assets/imgs/Progress.png" >
         <br>
-        <br>
-        <br>
-        <br>
-        <img class="center" src="assets/imgs/Prises.png" >
+        <ion-card>
 
+            <ion-item >
+                <h3 style="color:#FF4F49; text-align: center;">On your way to free prizes!</h3>
+              </ion-item>
+      
+              <div class="row" style="text-align: center;">
+                  <div id="amazon" class="column" >
+                    <img  src="assets/imgs/Amazon.png"  style="width:30%;">
+                    <p class="amazon" >Amazon Gift Card</p>
+                  </div>
+                  
+                  <div id="xbox" class="column">
+                    <img  src="assets/imgs/EcsBocks.png"  style="width:30%;  ">
+                    <p class="amazon" >Xbox Gift Card</p>
+                  </div>
+        </div>
+        </ion-card>
+        
    
   </ion-list>
 </ion-content>

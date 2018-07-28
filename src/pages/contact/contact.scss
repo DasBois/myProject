@@ -10,4 +10,37 @@ page-contact {
 .pushItDown{
     height: 12%;
 }
+.column {
+    float: left;
+    width: 49%;
+    padding: 5px;
+}
+.column img{
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row {
+    content: "";
+    clear: both;
+    display: table;
+}
+#xbox {
+
+    display: inline;
+
+}
+#amazon {
+
+    display:inline;
+}
+.amazon {
+
+
+}
+
+.row{
+    width: 100%;
+}
 }
