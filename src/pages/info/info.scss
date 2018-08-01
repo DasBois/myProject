@@ -6,28 +6,47 @@ page-info {
         margin: auto;
         margin-top: 25px;
     }
-    #lime{
+    .lime{
         border-top: .1px solid #c4c4c4;
-        border-bottom: .1px solid #c4c4c4;
+       
     }
     #words{
-        font-size: 15px;
+        font-size: 20px;
         font-family: 'Poppins', sans-serif;
+        font-weight: 600;
 
     }
     #para{
         font-size: 15px;
         font-family: 'Poppins', sans-serif;
-        font-weight: 600;
+        font-weight: 200 ;
+        
 
     }
     #head{
         font-size: 18px;
         font-family: 'Poppins', sans-serif;
-        font-weight: 600;
+        font-weight: 500;
 
     }
     .palabras{
         font-family: 'Poppins', sans-serif;
     }
-}
+    .background{
+        height: 150px;
+        width: 150%;
+        margin-top: -16px;
+        margin-left: -85px;
+        background-size: 400px 200px;        
+        background-image: url("/assets/imgs/Camp.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+ 
+    }
+    #quest{
+        
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600 ;
+    }
+ }
